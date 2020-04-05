@@ -3,7 +3,7 @@
 
 ## Overview
 
-Makers Acadamy group project to make an AirBnb Clone
+Makers Acadamy group week long project to make an airbnb clone. Since course completion the project has been cloned to my account for personal refactors.
 
 
 ### Team
@@ -27,11 +27,11 @@ The webapp has been developed on Sinatra, a rack based platform, so to install c
 - move to the project root directory in terminal
 - run ``` gem install bundle ```
 - run ``` bundle ```
-- run ``` gem install rake ```
-- run ``` rake ```
-- run ```rackup``` to start server on localhost port 9292
+- run ```brew install postgresql```
+- run ``` bundle exec rake ```
+- run ```bundle exec puma``` to start server on local unix socket (change config in ```config/puma.rb``` to change server location to local port)
 
-The rake command will install the DBMS 'postgresql', install required gems, remove any old Makersbnb databases and then create new ones for the project.
+The rake command will remove any old makersbnb databases and then create new ones for the project.
 
 
 

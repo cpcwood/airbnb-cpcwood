@@ -1,4 +1,12 @@
 coverage
-coverage/*
 coverage/**
 .DS_Store
+
+
+# Puma shared files
+shared/log/**
+!shared/log/.gitkeep
+shared/pids/**
+!shared/pids/.gitkeep
+shared/sockets/**
+!shared/sockets/.gitkeep
