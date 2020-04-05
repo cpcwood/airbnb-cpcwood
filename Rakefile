@@ -22,7 +22,6 @@ task :database do
   rescue => e
     puts e
   end
-
 end
 
 task :development_tables => [:database] do
@@ -50,7 +49,13 @@ task :test_tables => [:seed_development_tables] do
   sh %Q[psql -U #{ENV['USER']} -d makersbnb-test --command="CREATE TABLE messages(message_id SERIAL PRIMARY KEY, receiver_id_fk INTEGER REFERENCES users(user_id), messenger_id_fk INTEGER REFERENCES users(user_id), message VARCHAR, time_inserted TIMESTAMP DEFAULT current_timestamp);"]
 end
 
-task :production_database do
+task :create_production_database do
+  puts 'Clearing and creating databases...'
+  begin
+    sh "dropdb 'makersbnb-production'"
+  rescue => e
+    puts e
+  end
   puts 'Creating production database...'
   begin
     sh "createdb 'makersbnb-production'"
