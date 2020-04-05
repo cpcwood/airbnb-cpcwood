@@ -27,7 +27,7 @@ The webapp has been developed on Sinatra, a rack based platform, so to install c
 - move to the project root directory in terminal
 - run ``` gem install bundle ```
 - run ``` bundle ```
-- run ```brew install postgresql```
+- run ```brew install postgresql``` or ```sudo apt-get install postgresql postgresql-contrib python-psycopg2 libpq-dev``` on linux
 - run ``` bundle exec rake ```
 - run ```bundle exec puma``` to start server on local unix socket (change config in ```config/puma.rb``` to change server location to local port)
 
