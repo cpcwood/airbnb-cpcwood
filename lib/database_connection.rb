@@ -21,6 +21,6 @@ class DatabaseConnection
   private
 
   def self.database_type(dbname)
-    ENV['ENVIRONMENT'] == 'test' ? dbname + '-test' : dbname + '-development'
+    dbname + '-' + ENV['RACK_ENV']
   end
 end

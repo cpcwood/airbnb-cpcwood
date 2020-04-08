@@ -7,7 +7,6 @@ SimpleCov.start
 
 #set up environment
 ENV['RACK_ENV'] = 'test'
-ENV['ENVIRONMENT'] = 'test'
 $LOAD_PATH << './app/controllers'
 
 #add capybara setup
